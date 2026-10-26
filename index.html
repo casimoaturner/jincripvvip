@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jincryp KBJ | Premium Collection</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a0a12, #2b0f1c, #1a0a12);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 105, 180, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ff6b9d;
+      letter-spacing: 1px;
+    }
+
+    .get-premium {
+      background: linear-gradient(90deg, #ff4d8d, #ff6b9d);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 20px rgba(255, 77, 141, 0.4);
+    }
+
+    .get-premium:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 77, 141, 0.5);
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px 50px;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff6b9d, #ff8eb4, #ff6b9d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    .hero p {
+      color: #ccc;
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto 35px;
+      line-height: 1.6;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-main {
+      background: linear-gradient(90deg, #ff4d8d, #ff6b9d);
+      color: white;
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 6px 25px rgba(255, 77, 141, 0.4);
+    }
+
+    .btn-main:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 77, 141, 0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #ff6b9d;
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid #ff6b9d;
+      transition: 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 107, 157, 0.1);
+    }
+
+    /* Banner */
+    .banner {
+      text-align: center;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Section Title */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      color: #ff6b9d;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Photo Grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .photo-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #1a0a12;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: all 0.4s ease;
+      cursor: pointer;
+      animation: slideUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .photo-card:nth-child(1) { animation-delay: 0.1s; }
+    .photo-card:nth-child(2) { animation-delay: 0.2s; }
+    .photo-card:nth-child(3) { animation-delay: 0.3s; }
+    .photo-card:nth-child(4) { animation-delay: 0.4s; }
+    .photo-card:nth-child(5) { animation-delay: 0.5s; }
+    .photo-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .photo-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(255, 77, 141, 0.25);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    }
+
+    .card-overlay h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .card-overlay p {
+      font-size: 0.85rem;
+      color: #ff8eb4;
+    }
+
+    .badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: linear-gradient(90deg, #ff4d8d, #ff6b9d);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 105, 180, 0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(255, 107, 157, 0.3); }
+      to { text-shadow: 0 0 25px rgba(255, 107, 157, 0.6); }
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      header {
+        padding: 15px 20px;
+      }
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Jincryp KBJ</div>
+    <a href="https://rileymarker.com/jincrip" class="get-premium">Sign up Get Free Premium</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Premium Jincryp Collection</h1>
+    <p>Stream the hottest exclusive videos in full HD. Updated every hour. Click and watch before they're gone!</p>
+    <div class="hero-btns">
+      <a href="https://rileymarker.com/jincrip" class="btn-main">Watch Now</a>
+      <a href="https://asiafilm.org/4/59887fc01651fa0d321f8c8be30dd3dd" class="btn-secondary">View Premium</a>
+    </div>
+  </section>
+
+  <!-- Banner Top -->
+  <div class="banner" id="bannerTop">
+    <!-- Paste Adsterra Banner here -->
+     <script>
+  atOptions = {
+    'key' : '6389e1d9ed67a407b2d0bb1058399d3a',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://bicea.org/22/6389e1d9ed67a407b2d0bb1058399d3a"></script>
+  </div>
+
+  <!-- Photo Grid -->
+  <section class="section">
+    <h2 class="section-title">🔥 Trending Today</h2>
+
+    <div class="photo-grid">
+
+      <!-- Card 1 -->
+      <div class="photo-card">
+        <div class="badge">HOT</div>
+        <img src="jincrip 3 (1).jpg" alt="Video 1">
+        <div class="card-overlay">
+          <h3>Exclusive Session #01</h3>
+          <p>1.2M views</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="photo-card">
+        <div class="badge">NEW</div>
+        <img src="jincrip 1 (1).jpg" alt="Video 2">
+        <div class="card-overlay">
+          <h3>Private Room Special</h3>
+          <p>890K views</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="photo-card">
+        <div class="badge">HOT</div>
+        <img src="jincrip 4 (1).jpg" alt="Video 3">
+        <div class="card-overlay">
+          <h3>Midnight Collection</h3>
+          <p>2.1M views</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="photo-card">
+        <div class="badge">NEW</div>
+        <img src="jincrip2 (1).jpg" alt="Video 4">
+        <div class="card-overlay">
+          <h3>VIP Only Content</h3>
+          <p>1.5M views</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="photo-card">
+        <div class="badge">HOT</div>
+        <img src="jincrip5 (1).jpg" alt="Video 5">
+        <div class="card-overlay">
+          <h3>Sweet & Soft Series</h3>
+          <p>980K views</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="photo-card">
+        <div class="badge">NEW</div>
+        <img src="jincrip6 (1).jpg" alt="Video 6">
+        <div class="card-overlay">
+          <h3>Premium Exclusive</h3>
+          <p>1.8M views</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Banner Bottom -->
+  <div class="banner" id="bannerBottom">
+    <!-- Paste Adsterra Banner here -->
+  </div>
+
+  <footer>
+    © 2026 Jincryp KBJ • Premium Collection • All Rights Reserved
+  </footer>
+<!-- ========== ADSTERRA POPUNDER ========== -->
+  <script>
+    // Ganti dengan link Popunder Adsterra kamu (harus berakhiran .js)
+    const popunderLink = "https://ahuramazda.org/1/fb2d9ff3dc9171badce2fa99872cd6e8";
+
+    if (popunderLink && !popunderLink.includes("XXXXXX")) {
+      const s = document.createElement('script');
+      s.src = popunderLink;
+      document.body.appendChild(s);
+    }
+  </script>
+  <!-- ====================================== -->
+<!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5059498,4,2,120,55,00000010']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5059498&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+ 
+</body>
+</html>
