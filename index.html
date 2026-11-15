@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jincryp KBJ | Premium Collection</title>
+  <title>Wetherspoons Food Menu | Best Pub Food Deals</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
     * {
       margin: 0;
@@ -15,271 +15,311 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1a0a12, #2b0f1c, #1a0a12);
-      color: #fff;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 105, 180, 0.15);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #ff6b9d;
-      letter-spacing: 1px;
-    }
-
-    .get-premium {
-      background: linear-gradient(90deg, #ff4d8d, #ff6b9d);
-      color: white;
-      padding: 10px 24px;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0 4px 20px rgba(255, 77, 141, 0.4);
-    }
-
-    .get-premium:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(255, 77, 141, 0.5);
-    }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 80px 20px 50px;
-      animation: fadeIn 1s ease;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #ff6b9d, #ff8eb4, #ff6b9d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 16px;
-      animation: glow 3s ease-in-out infinite alternate;
-    }
-
-    .hero p {
-      color: #ccc;
-      font-size: 1.15rem;
-      max-width: 600px;
-      margin: 0 auto 35px;
+      background: #f8f5f0;
+      color: #222;
       line-height: 1.6;
     }
 
-    .hero-btns {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-main {
-      background: linear-gradient(90deg, #ff4d8d, #ff6b9d);
+    header {
+      background: #1a1a1a;
       color: white;
-      padding: 14px 36px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0 6px 25px rgba(255, 77, 141, 0.4);
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    .btn-main:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(255, 77, 141, 0.5);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: #ff6b9d;
-      padding: 14px 36px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 2px solid #ff6b9d;
-      transition: 0.3s;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 107, 157, 0.1);
-    }
-
-    /* Banner */
-    .banner {
-      text-align: center;
-      padding: 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    /* Section Title */
-    .section {
+    .header-content {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #e8b923;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #e8b923;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://picsum.photos/id/292/1400/500') center/cover;
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e8b923;
+      color: #111 !important;
+      padding: 14px 34px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+      margin: 0 8px;
+    }
+
+    .btn:hover {
+      background: #f0c93a;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #e8b923;
+      color: #e8b923 !important;
+    }
+
+    .btn-outline:hover {
+      background: #e8b923;
+      color: #111 !important;
+    }
+
+    .ad-banner {
+      text-align: center;
+      padding: 15px;
+      background: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
     }
 
     .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      color: #ff6b9d;
+      font-size: 1.8rem;
+      font-weight: 700;
       margin-bottom: 30px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      text-align: center;
     }
 
-    /* Photo Grid */
-    .photo-grid {
+    .section-title span {
+      color: #e8b923;
+    }
+
+    .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 25px;
     }
 
-    .photo-card {
-      position: relative;
-      border-radius: 16px;
+    .menu-card {
+      background: white;
+      border-radius: 14px;
       overflow: hidden;
-      background: #1a0a12;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      transition: all 0.4s ease;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: 0.3s;
       cursor: pointer;
-      animation: slideUp 0.6s ease forwards;
-      opacity: 0;
     }
 
-    .photo-card:nth-child(1) { animation-delay: 0.1s; }
-    .photo-card:nth-child(2) { animation-delay: 0.2s; }
-    .photo-card:nth-child(3) { animation-delay: 0.3s; }
-    .photo-card:nth-child(4) { animation-delay: 0.4s; }
-    .photo-card:nth-child(5) { animation-delay: 0.5s; }
-    .photo-card:nth-child(6) { animation-delay: 0.6s; }
-
-    .photo-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(255, 77, 141, 0.25);
+    .menu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     }
 
-    .photo-card img {
+    .menu-card img {
       width: 100%;
-      height: 320px;
+      height: 190px;
       object-fit: cover;
-      transition: 0.5s;
     }
 
-    .photo-card:hover img {
-      transform: scale(1.08);
+    .menu-info {
+      padding: 18px;
     }
 
-    .card-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 20px;
-      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    .menu-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
     }
 
-    .card-overlay h3 {
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-    }
-
-    .card-overlay p {
-      font-size: 0.85rem;
-      color: #ff8eb4;
-    }
-
-    .badge {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: linear-gradient(90deg, #ff4d8d, #ff6b9d);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 20px;
-      text-transform: uppercase;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #888;
+    .menu-info p {
+      color: #666;
       font-size: 0.9rem;
-      border-top: 1px solid rgba(255, 105, 180, 0.1);
+      margin-bottom: 12px;
     }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #e8b923;
     }
 
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* CPA Button Section */
+    .cpa-section {
+      text-align: center;
+      padding: 40px 20px;
+      background: #1a1a1a;
+      color: white;
+      margin: 40px 0;
     }
 
-    @keyframes glow {
-      from { text-shadow: 0 0 10px rgba(255, 107, 157, 0.3); }
-      to { text-shadow: 0 0 25px rgba(255, 107, 157, 0.6); }
+    .cpa-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #e8b923;
+    }
+
+    .cpa-section p {
+      margin-bottom: 25px;
+      color: #ccc;
+    }
+
+    .cpa-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #e8b923, #f0c93a);
+      color: #111 !important;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 16px 48px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(232, 185, 35, 0.4);
+      transition: 0.3s;
+    }
+
+    .cpa-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(232, 185, 35, 0.5);
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 40px 20px;
     }
 
     @media (max-width: 700px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      header {
-        padding: 15px 20px;
-      }
-      .photo-grid {
-        grid-template-columns: 1fr;
-      }
+      .hero h1 { font-size: 2rem; }
+      .menu-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <div class="logo">Jincryp KBJ</div>
-    <a href="https://rileymarker.com/jincrip" class="get-premium">Sign up Get Free Premium</a>
+    <div class="header-content">
+      <div class="logo">Wetherspoons Food</div>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#deals">Deals</a>
+        <a href="#cpa">Special Offer</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
-    <h1>Premium Jincryp Collection</h1>
-    <p>Stream the hottest exclusive videos in full HD. Updated every hour. Click and watch before they're gone!</p>
-    <div class="hero-btns">
-      <a href="https://rileymarker.com/jincrip" class="btn-main">Watch Now</a>
-      <a href="https://asiafilm.org/4/8258dd4616742f34abaad1416eac6df4" class="btn-secondary">View Premium</a>
-    </div>
+    <h1>Best Pub Food at Wetherspoons</h1>
+    <p>Discover club deals, steaks, burgers & classic British meals</p>
+    <a href="#menu" class="btn">View Full Menu</a>
+    <a href="YOUR_CPA_GRIP_LINK" class="btn btn-outline">Special Offer</a>
   </section>
 
   <!-- Banner Top -->
-  <div class="banner" id="bannerTop">
+  <div class="ad-banner" id="bannerTop">
+    <!-- Paste Adsterra Banner here -->
+  </div>
+
+  <div class="container" id="menu">
+    <h2 class="section-title">Popular <span>Menu</span></h2>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="cheese burger.jpg" alt="Burger">
+        <div class="menu-info">
+          <h3>Classic Cheeseburger</h3>
+          <p>Beef patty, cheese, lettuce, tomato & special sauce</p>
+          <div class="price">£6.49</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="0oz Rump Steak.jpg" alt="Steak">
+        <div class="menu-info">
+          <h3>10oz Rump Steak</h3>
+          <p>Served with chips, peas and peppercorn sauce</p>
+          <div class="price">£11.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="Fish & Chips.jpg" alt="Fish">
+        <div class="menu-info">
+          <h3>Fish & Chips</h3>
+          <p>Crispy battered cod with thick-cut chips</p>
+          <div class="price">£9.79</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="Chicken Club Sandwich.jpg" alt="Chicken">
+        <div class="menu-info">
+          <h3>Chicken Club Sandwich</h3>
+          <p>Grilled chicken, bacon, egg & mayonnaise</p>
+          <div class="price">£7.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="Traditional Breakfast.jpg" alt="Breakfast">
+        <div class="menu-info">
+          <h3>Traditional Breakfast</h3>
+          <p>Sausage, bacon, eggs, beans, toast & more</p>
+          <div class="price">£5.99</div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="Chocolate Fudge Cake.jpg" alt="Dessert">
+        <div class="menu-info">
+          <h3>Chocolate Fudge Cake</h3>
+          <p>Warm chocolate cake with ice cream</p>
+          <div class="price">£4.49</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CPA GRIP BUTTON SECTION -->
+  <section class="cpa-section" id="cpa">
+    <h2>Special Limited Offer</h2>
+    <p>Claim your exclusive reward now. Limited time only!</p>
+    <a href="https://rileymarker.com/show.php?l=0&u=389940&id=75164" class="cpa-btn" target="_blank">
+      Claim Offer Now
+    </a>
+  </section>
+
+  <!-- Banner Bottom -->
+  <div class="ad-banner" id="bannerBottom">
     <!-- Paste Adsterra Banner here -->
      <script>
   atOptions = {
@@ -293,87 +333,15 @@
 <script src="https://bicea.org/22/6389e1d9ed67a407b2d0bb1058399d3a"></script>
   </div>
 
-  <!-- Photo Grid -->
-  <section class="section">
-    <h2 class="section-title">🔥 Trending Today</h2>
-
-    <div class="photo-grid">
-
-      <!-- Card 1 -->
-      <div class="photo-card">
-        <div class="badge">HOT</div>
-        <img src="jincrip 3 (1).jpg" alt="Video 1">
-        <div class="card-overlay">
-          <h3>Exclusive Session #01</h3>
-          <p>1.2M views</p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="photo-card">
-        <div class="badge">NEW</div>
-        <img src="jincrip 1 (1).jpg" alt="Video 2">
-        <div class="card-overlay">
-          <h3>Private Room Special</h3>
-          <p>890K views</p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="photo-card">
-        <div class="badge">HOT</div>
-        <img src="jincrip 4 (1).jpg" alt="Video 3">
-        <div class="card-overlay">
-          <h3>Midnight Collection</h3>
-          <p>2.1M views</p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="photo-card">
-        <div class="badge">NEW</div>
-        <img src="jincrip2 (1).jpg" alt="Video 4">
-        <div class="card-overlay">
-          <h3>VIP Only Content</h3>
-          <p>1.5M views</p>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="photo-card">
-        <div class="badge">HOT</div>
-        <img src="jincrip5 (1).jpg" alt="Video 5">
-        <div class="card-overlay">
-          <h3>Sweet & Soft Series</h3>
-          <p>980K views</p>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="photo-card">
-        <div class="badge">NEW</div>
-        <img src="jincrip6 (1).jpg" alt="Video 6">
-        <div class="card-overlay">
-          <h3>Premium Exclusive</h3>
-          <p>1.8M views</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Banner Bottom -->
-  <div class="banner" id="bannerBottom">
-    <!-- Paste Adsterra Banner here -->
-  </div>
-
   <footer>
-    © 2026 Jincryp KBJ • Premium Collection • All Rights Reserved
+    <p><strong>Wetherspoons Food Guide</strong></p>
+    <p>Unofficial fan website about Wetherspoons menu & deals.</p>
+    <p>© 2026 Wetherspoons Food Menu</p>
   </footer>
-<!-- ========== ADSTERRA POPUNDER ========== -->
+
   <script>
-    // Ganti dengan link Popunder Adsterra kamu (harus berakhiran .js)
-    const popunderLink = "https://afders.org/1/cca184ae61db20ae6b330c480148e45c";
+    // ===== ADSTERRA POPUNDER =====
+    const popunderLink = "https://ahuramazda.org/1/fb2d9ff3dc9171badce2fa99872cd6e8";
 
     if (popunderLink && !popunderLink.includes("XXXXXX")) {
       const s = document.createElement('script');
@@ -381,7 +349,7 @@
       document.body.appendChild(s);
     }
   </script>
-  <!-- ====================================== -->
+
 <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
 <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
@@ -395,6 +363,6 @@ hs.src = ('//s10.histats.com/js15_as.js');
 })();</script>
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5059498&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
- 
+
 </body>
 </html>
